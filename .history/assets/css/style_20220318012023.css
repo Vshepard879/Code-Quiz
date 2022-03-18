@@ -1,32 +1,21 @@
 *, *::before, *::after {
     box-sizing: border-box;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 25px;
 }
 
 :root {
-    --hue-neutral: 15;
+    --hue-neutral: 200;
     --hue-wrong: 0;
-    --hue-correct: 145;
+    --hue-correct: 150
 }
 
 body {
-    --hue: var(--hue-neutral);
+    --hue: var(--hue-natural);
     padding: 0;
     margin: 0;
     display: flex;
     width: 100vw;
     height: 100vh;
-    justify-content:center;
+    justify-content: center;
     align-items:center;
-    background-color:hsl(var(--hue), 100%, 35%);
-}
-
-
-body.correct {
-    --hue: var(--hue-correct);  
-}
-
-body.wrong {
-    --hue: var(--hue-wrong);
 }

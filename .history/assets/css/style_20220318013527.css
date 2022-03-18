@@ -1,11 +1,11 @@
 *, *::before, *::after {
     box-sizing: border-box;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 :root {
-    --hue-neutral: 15;
+    --hue-neutral: 300;
     --hue-wrong: 0;
     --hue-correct: 145;
 }
@@ -19,14 +19,5 @@ body {
     height: 100vh;
     justify-content:center;
     align-items:center;
-    background-color:hsl(var(--hue), 100%, 35%);
-}
-
-
-body.correct {
-    --hue: var(--hue-correct);  
-}
-
-body.wrong {
-    --hue: var(--hue-wrong);
+    background-color:hsl(var(--hue), 100%, 20%);
 }

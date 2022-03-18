@@ -19,7 +19,7 @@ body {
     height: 100vh;
     justify-content:center;
     align-items:center;
-    background-color:hsl(var(--hue), 100%, 35%);
+    background-color:hsl(var(--hue), 100%, 25%);
 }
 
 
