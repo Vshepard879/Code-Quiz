@@ -10,8 +10,6 @@ nextButton.addEventListener('click', () => {
     currentQuestionIndex++
     setNextQuestion()
 })
-// function that starts the Quiz
-
 function startQuiz() {
 startButton.classList.add('hide')
  shuffledQuestions = questions.sort(() => Math.random() - .5)
@@ -19,16 +17,6 @@ currentQuestionIndex = 0
 questionContainerElement.classList.remove('hide')
 setNextQuestion()
 }
-
-var count = 15;
-var interval = setInterval(function(){
-  document.getElementById('count').innerHTML=count;
-  count--;
-  if (count === 0){
-    clearInterval(interval);
-    document.getElementById('count').innerHTML='Done';
-  }
-}, 1000);
 
 function setNextQuestion() {
     resetState()
@@ -47,9 +35,10 @@ function showQuestion(question) {
       answerButtonsElement.appendChild(button)   
     })
 }
-// this function is used to reset each question
+
 function resetState() {
     nextButton.classList.add('hide')
+    clearStatusClass(document.body)
     while (answerButtonsElement.firstChild) {
         answerButtonsElement.removeChild
         (answerButtonsElement.firstChild)
@@ -83,9 +72,8 @@ function setStatusClass(element, correct) {
         element.classList.remove('correct')
         element.classList.remove('wrong')
     }
-    
 }
-// the arrays of questions and answers
+
 const questions = [
     {
         question: 'Which of these is not one of the 3 Initial coding languages?',

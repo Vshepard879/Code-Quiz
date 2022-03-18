@@ -11,8 +11,8 @@
 }
 
 header {
-    font-style: italic;
-    font-size: 35px;
+    display: flex;
+    flex-direction: column;
 }
 body{
     --hue: var(--hue-neutral);

@@ -9,9 +9,8 @@
     <title>Quiz App</title>
 </head>
 
-<body>
+<body onload="setTimeout(Timer,15000)">
     <header>Coding Quiz!</header>
-    <div id="count">Timer</div>
     <!--Start Quiz Container-->
     <div class="container">
         <div id="question-container" class="hide">
@@ -23,11 +22,10 @@
                 <button class="btn">Answer 4</button>
             </div>
         </div>
-        <div class="controls counts">
+        <div class="controls">
             <button id="start-btn" class="start-btn btn">START</button>
             <button id="next-btn" class="next-btn btn hide">Next</button>
         </div>
-        
     </div>
 </body>
 </html>

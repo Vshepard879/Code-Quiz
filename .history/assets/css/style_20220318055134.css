@@ -11,8 +11,7 @@
 }
 
 header {
-    font-style: italic;
-    font-size: 35px;
+    display: flex;
 }
 body{
     --hue: var(--hue-neutral);

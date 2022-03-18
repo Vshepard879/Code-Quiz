@@ -20,15 +20,10 @@ questionContainerElement.classList.remove('hide')
 setNextQuestion()
 }
 
-var count = 15;
-var interval = setInterval(function(){
-  document.getElementById('count').innerHTML=count;
-  count--;
-  if (count === 0){
-    clearInterval(interval);
-    document.getElementById('count').innerHTML='Done';
-  }
-}, 1000);
+function Timer()
+    {
+         alert("You are out of time!");
+    }
 
 function setNextQuestion() {
     resetState()

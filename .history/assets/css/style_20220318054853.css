@@ -11,13 +11,14 @@
 }
 
 header {
-    font-style: italic;
-    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items:baseline
 }
 body{
     --hue: var(--hue-neutral);
-    padding: 0;
-    margin: 0;
+    padding: 10;
+    margin: 10;
     display: flex;
     flex-direction: column;
     width: 100vw;
