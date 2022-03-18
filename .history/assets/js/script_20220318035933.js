@@ -6,10 +6,7 @@ const answerButtonsElement = document.getElementById('answer-buttons')
 let shuffledQuestions, currentQuestionIndex
 
 startButton.addEventListener('click', startQuiz)
-nextButton.addEventListener('click', () => {
-    currentQuestionIndex++
-    setNextQuestion()
-})
+
 function startQuiz() {
 startButton.classList.add('hide')
  shuffledQuestions = questions.sort(() => Math.random() - .5)
@@ -50,13 +47,6 @@ setStatusClass(document.body, correct)
 Array.from(answerButtonsElement.children).forEach(button => {
     setStatusClass(button, button.dataset.correct)
 })
-if (shuffledQuestions.length > currentQuestionIndex +1) {
-    nextButton.classList.remove('hide')
-} else {
-    startButton.innerText = 'Restart'
-    startButton.classList.remove('hide')
-}
-nextButton.classList.remove('hide')
 }
 
 function setStatusClass(element, correct) {
@@ -82,47 +72,5 @@ const questions = [
             { text:'CSS', correct: false},
             { text:'JavaScript', correct: false},
         ]
-    },
-    { 
-        question: 'What does the C in CSS stand for?',
-        answers: [
-            { text:'Chocolate', correct: false},
-            { text:'Corporate', correct: false},
-            { text:'Cascading', correct: true},
-            { text:'Computer', correct: false},
-        ]
-    },
-    { 
-        question: 'Arrays in Javascript can be used to store?',
-        answers: [
-            { text:'Numbers and Strings', correct: false},
-            { text:'Booleans', correct: false},
-            { text:'Other Arrays', correct: false},
-            { text:'All of the above', correct: true},
-        ]
-    },
-    { 
-        question: 'The condition in an if/else statement are store in?',
-        answers: [
-            { text:'Parenthesis', correct: true},
-            { text:'curly brackets', correct: false},
-            { text:'brackets', correct: false},
-            { text:'commas', correct: false},
-        ]},
-        { 
-            question: 'A very useful tool during the development and debugging stage used to print to the debugger is?',
-            answers: [
-                { text:'Array', correct: false},
-                { text:'.dataset', correct: false},
-                { text:'console.log', correct: true},
-                { text:'=>', correct: false},
-            ]},
-            { 
-                question: 'Commonly used data types do not include?',
-                answers: [
-                    { text:'Booleans', correct: false},
-                    { text:'Strings', correct: false},
-                    { text:'Numbers', correct: false},
-                    { text:'Alerts', correct: true},
-                ]},
-            ]
+    }
+]

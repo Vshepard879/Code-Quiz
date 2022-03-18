@@ -95,34 +95,50 @@ const questions = [
     { 
         question: 'Arrays in Javascript can be used to store?',
         answers: [
-            { text:'Numbers and Strings', correct: false},
+            { text:'Numbers and Strings', correct: true},
             { text:'Booleans', correct: false},
             { text:'Other Arrays', correct: false},
-            { text:'All of the above', correct: true},
+            { text:'All of the above', correct: false},
         ]
     },
     { 
-        question: 'The condition in an if/else statement are store in?',
+        question: 'Which of these is not one of the 3 Initial coding languages?',
         answers: [
-            { text:'Parenthesis', correct: true},
-            { text:'curly brackets', correct: false},
-            { text:'brackets', correct: false},
-            { text:'commas', correct: false},
+            { text:'Python', correct: true},
+            { text:'HTML', correct: false},
+            { text:'CSS', correct: false},
+            { text:'JavaScript', correct: false},
         ]},
         { 
-            question: 'A very useful tool during the development and debugging stage used to print to the debugger is?',
+            question: 'Which of these is not one of the 3 Initial coding languages?',
             answers: [
-                { text:'Array', correct: false},
-                { text:'.dataset', correct: false},
-                { text:'console.log', correct: true},
-                { text:'=>', correct: false},
+                { text:'Python', correct: true},
+                { text:'HTML', correct: false},
+                { text:'CSS', correct: false},
+                { text:'JavaScript', correct: false},
             ]},
             { 
-                question: 'Commonly used data types do not include?',
+                question: 'Which of these is not one of the 3 Initial coding languages?',
                 answers: [
-                    { text:'Booleans', correct: false},
-                    { text:'Strings', correct: false},
-                    { text:'Numbers', correct: false},
-                    { text:'Alerts', correct: true},
+                    { text:'Python', correct: true},
+                    { text:'HTML', correct: false},
+                    { text:'CSS', correct: false},
+                    { text:'JavaScript', correct: false},
                 ]},
-            ]
+                { 
+                    question: 'Which of these is not one of the 3 Initial coding languages?',
+                    answers: [
+                        { text:'Python', correct: true},
+                        { text:'HTML', correct: false},
+                        { text:'CSS', correct: false},
+                        { text:'JavaScript', correct: false},
+                    ]},
+                    { 
+                        question: 'Which of these is not one of the 3 Initial coding languages?',
+                        answers: [
+                            { text:'Python', correct: true},
+                            { text:'HTML', correct: false},
+                            { text:'CSS', correct: false},
+                            { text:'JavaScript', correct: false},
+                        ]},
+    ]
