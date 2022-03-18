@@ -75,14 +75,3 @@ body.wrong {
     font-weight: bold;
     padding: 10px 20px;
 }
-
-.controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-}
-
-.hide {
-    display: none;
-}

@@ -15,40 +15,20 @@ questionContainerElement.classList.remove('hide')
 setNextQuestion()
 }
 
-function setNextQuestion() {
-    resetState()
-    showQuestion(shuffledQuestions[currentQuestionIndex])
-    }
-
 function showQuestion(question) {
     questionElement.innerText =question.question
-    question.answers.forEach(answer => {
-        const button = document.createElement('button')
-        button.innerText = answer.text
-        button.classList.add('btn')
-      if   (answer.correct) {
-          button.dataset.correct = answer.correct
-      }
-      button.addEventListener('click', selectAnswer)
-      answerButtonsElement.appendChild(button)   
-    })
+}
+function setNextQuestion() {
+showQuestion(shuffledQuestions[currentQuestionIndex])
 }
 
-function resetState() {
-    nextButton.classList.add(hide)
-    while (answerButtonsElement.firstChild) {
-        answerButtonsElement.removeChild
-        (answerButtonsElement.firstChild)
-    }
-}
 function selectAnswer() {
 
 }
 
-
 const questions = [
     {
-        question: 'Which of these is not one of the 3 Initial coding languages?',
+        question: 'Which of these is not one of the 3 Initial coding languages',
         answers: [
             { text:'Python', correct: true},
             { text:'HTML', correct: false},

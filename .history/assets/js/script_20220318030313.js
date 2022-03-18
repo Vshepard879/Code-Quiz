@@ -15,11 +15,6 @@ questionContainerElement.classList.remove('hide')
 setNextQuestion()
 }
 
-function setNextQuestion() {
-    resetState()
-    showQuestion(shuffledQuestions[currentQuestionIndex])
-    }
-
 function showQuestion(question) {
     questionElement.innerText =question.question
     question.answers.forEach(answer => {
@@ -33,18 +28,13 @@ function showQuestion(question) {
       answerButtonsElement.appendChild(button)   
     })
 }
-
-function resetState() {
-    nextButton.classList.add(hide)
-    while (answerButtonsElement.firstChild) {
-        answerButtonsElement.removeChild
-        (answerButtonsElement.firstChild)
-    }
+function setNextQuestion() {
+showQuestion(shuffledQuestions[currentQuestionIndex])
 }
+
 function selectAnswer() {
 
 }
-
 
 const questions = [
     {

@@ -80,9 +80,4 @@ body.wrong {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px;
-}
-
-.hide {
-    display: none;
 }
