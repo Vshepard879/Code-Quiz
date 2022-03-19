@@ -2,24 +2,21 @@ const startButton = document.getElementById('start-btn');
 const questionContainerElement = document.getElementById('question-container');
 const questionElement = document.getElementById( 'question');
 const answerButtonsElement = document.getElementById('answer-buttons');
-var timerEl = document.getElementById('time');
+var timerEl = document.querySelector("#time");
 const submitButton = document.getElementById('submit-btn')
 const endScreen = document.getElementById('end-screen')
 var shuffledQuestions, currentQuestionIndex, currentScore
 var timer
-var timeRemaining = 90
-var initialsInputFieldEl =  document.getElementById('initials-input-field')
 
 startButton.addEventListener('click', startQuiz)
-submitButton.addEventListener('click', submitScore)
+// nextButton.addEventListener('click', () => {
+    //currentQuestionIndex++
+    //setNextQuestion()
+//})
+
 // function that starts the Quiz
 
 function startQuiz() {
-    if (!endScreen.classList.contains('hide')) {
-        endScreen.classList.add('hide')
-    }
-
-    
     startButton.classList.add("hide")
     // randomizes question order
     shuffledQuestions = questions.sort(() => Math.random() - .5)
@@ -27,22 +24,15 @@ function startQuiz() {
     currentScore = 0 
     questionContainerElement.classList.remove("hide")
     setNextQuestion()
-    startTimer()
-   
+    //countdown()
 }
 
 function startTimer() {
-    timeRemaining = 90
     timer = setInterval(updateRemainingTime, 1000)
 }
 
 function updateRemainingTime() {
-    timeRemaining--
-    timerEl.textContent = timeRemaining
-    if (timeRemaining <= 0){
-        endQuiz()
-    }
-    
+
 }
 
 function setNextQuestion() {
@@ -69,27 +59,11 @@ function endQuiz() {
     startButton.classList.remove('hide')
     questionContainerElement.classList.add('hide')
     endScreen.classList.remove('hide')
-    clearInterval(timer)
+
     var finalScore = document.getElementById('final-score')
-    finalScore.textContent = timeRemaining
+    finalScore.textContent = currentScore
 }
 
-function submitScore() {
-    var initials = initialsInputFieldEl.value.trim();
-    console.log(initials)
-    var newScore = {
-        initials: initials,
-        score: timeRemaining,
-    }
-
-    // get saved scores from local storage, or if not any, set to empty array
-    var highScores = JSON.parse(window.localStorage.getItem("highScores")) || [];
-
-    highScores.push(newScore)
-    window.localStorage.setItem("highScores", JSON.stringify(highScores));
-    
-    submitButton.classList.add('hide')
-}
 // this function is used to reset each question
 function resetState() {
     while (answerButtonsElement.firstChild) {
@@ -107,11 +81,7 @@ function selectAnswer(v) {
         console.log("correct!")
     } else {
         // decrease time
-        timeRemaining = timeRemaining - 5
-        timerEl.textContent = timeRemaining
-        if(timeRemaining <= 0){
-            endQuiz();
-        }
+
     }
 
     if (shuffledQuestions.length - 1 < currentQuestionIndex ) { 

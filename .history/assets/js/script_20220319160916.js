@@ -75,20 +75,9 @@ function endQuiz() {
 }
 
 function submitScore() {
-    var initials = initialsInputFieldEl.value.trim();
+    console.log("You submitted your score")
+    var initials = initialsInputFieldEl.value
     console.log(initials)
-    var newScore = {
-        initials: initials,
-        score: timeRemaining,
-    }
-
-    // get saved scores from local storage, or if not any, set to empty array
-    var highScores = JSON.parse(window.localStorage.getItem("highScores")) || [];
-
-    highScores.push(newScore)
-    window.localStorage.setItem("highScores", JSON.stringify(highScores));
-    
-    submitButton.classList.add('hide')
 }
 // this function is used to reset each question
 function resetState() {

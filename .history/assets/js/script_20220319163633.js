@@ -87,8 +87,7 @@ function submitScore() {
 
     highScores.push(newScore)
     window.localStorage.setItem("highScores", JSON.stringify(highScores));
-    
-    submitButton.classList.add('hide')
+      
 }
 // this function is used to reset each question
 function resetState() {

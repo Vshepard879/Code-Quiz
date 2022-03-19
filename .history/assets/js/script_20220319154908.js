@@ -8,10 +8,9 @@ const endScreen = document.getElementById('end-screen')
 var shuffledQuestions, currentQuestionIndex, currentScore
 var timer
 var timeRemaining = 90
-var initialsInputFieldEl =  document.getElementById('initials-input-field')
+
 
 startButton.addEventListener('click', startQuiz)
-submitButton.addEventListener('click', submitScore)
 // function that starts the Quiz
 
 function startQuiz() {
@@ -71,25 +70,9 @@ function endQuiz() {
     endScreen.classList.remove('hide')
     clearInterval(timer)
     var finalScore = document.getElementById('final-score')
-    finalScore.textContent = timeRemaining
+    finalScore.textContent = currentScore
 }
 
-function submitScore() {
-    var initials = initialsInputFieldEl.value.trim();
-    console.log(initials)
-    var newScore = {
-        initials: initials,
-        score: timeRemaining,
-    }
-
-    // get saved scores from local storage, or if not any, set to empty array
-    var highScores = JSON.parse(window.localStorage.getItem("highScores")) || [];
-
-    highScores.push(newScore)
-    window.localStorage.setItem("highScores", JSON.stringify(highScores));
-    
-    submitButton.classList.add('hide')
-}
 // this function is used to reset each question
 function resetState() {
     while (answerButtonsElement.firstChild) {

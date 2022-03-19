@@ -6,19 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./assets/css/style.css" link rel="stylesheet">
     <script defer src="./assets/js/script.js"></script>
-    <script defer src="./assets/js/questions.js"></script>
     <title>Quiz App</title>
 </head>
 
 <body>
-    <header>Coding Quiz</header>
-    <div class ="scores"><a href="score.html">View Highscores</a></div>
-
-    <div class="timer">Time: <span id="time">90</span></div>
-
+    <header>Coding Quiz!</header>
+    
     <!--Start Quiz Container-->
     <div class="container">
         <div id="question-container" class="hide">
+            <header>
+                <div class="title">Coding Quiz!</div>
+                <div class="timer">
+                    <div class="time_text">Time Left</div>
+                    <div class="timer_sec">20</div>
+                </div>
+            </header>
                 <div id="question">Question</div>
                 <div id="answer-buttons" class="btn-grid">
                 <button class="btn">Answer 1</button>
@@ -29,18 +32,8 @@
         </div>
         <div class="controls counts">
             <button id="start-btn" class="start-btn btn">START</button>
+            <button id="next-btn" class="next-btn btn hide">Next</button>
         </div>
-
-        <div id="end-screen" class="hide">
-            <h2>All done!</h2>
-            <p>Your final score is <span id="final-score"></span>.</p>
-            <p>
-              Enter initials: <input type="text" id="initials-input-field" max="3" />
-              <button id="submit-btn">Submit</button>
-            </p>
-          </div>
-    
-          
         
     </div>
 </body>
