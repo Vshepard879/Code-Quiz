@@ -48,27 +48,25 @@ function updateRemainingTime() {
 function setNextQuestion() {
     resetState()
     showQuestion(shuffledQuestions[currentQuestionIndex])
-}
-
+    }
 function showQuestion(question) {
-    questionElement.innerText = question.question
-
+    questionElement.innerText =question.question
     question.answers.forEach(answer => {
-      const button = document.createElement('button')
-      button.innerText = answer.text
-      button.classList.add('btn')
-
+        const button = document.createElement('button')
+        button.innerText = answer.text
+        button.classList.add('btn')
       if   (answer.correct) {
           button.dataset.correct = answer.correct
       }
       button.addEventListener('click', selectAnswer)
-      button.addEventListener('mouseleave', clearPreviousAnswerResult)
       answerButtonsElement.appendChild(button)   
     })
 }
 
 function endQuiz() {
     submitButton.classList.remove('hide')
+    // startButton.innerText = 'Restart'
+    //startButton.classList.remove('hide')
     questionContainerElement.classList.add('hide')
     endScreen.classList.remove('hide')
     clearInterval(timer)
@@ -86,20 +84,18 @@ function submitScore() {
 
     // get saved scores from local storage, or if not any, set to empty array
     var highScores = JSON.parse(window.localStorage.getItem("highScores")) || [];
+
     highScores.push(newScore)
     window.localStorage.setItem("highScores", JSON.stringify(highScores));
     
     submitButton.classList.add('hide')
 
-    // redirect to next page
-    window.location.href = "score.html";
+     // redirect to next page
+     window.location.href = "score.html";
 }
-
 // this function is used to reset each question
-function resetState() 
-{
-    while (answerButtonsElement.firstChild) 
-    {
+function resetState() {
+    while (answerButtonsElement.firstChild) {
         answerButtonsElement.removeChild
         (answerButtonsElement.firstChild)
     }
@@ -110,22 +106,18 @@ function selectAnswer(v) {
     const correct = selectedButton.dataset.correct
     currentQuestionIndex++
 
-    // Provides feed back as to whether previous question was correct
     if (correct) {
         console.log("correct!")
-        answerResponse.textContent = "Correct!";
-        answerResponse.style.color = "green";
-        answerResponse.classList.remove('hide');
+        //answerResponse.textContent = "Correct!";
+        //answerResponse.style.color = "green";
+       // answerResponse.style.fontSize = "400%";
     } else {
-        answerResponse.textContent = "Wrong!";
-        answerResponse.style.color = "red";
-        answerResponse.classList.remove('hide');
-
-         //decrease time
+       // answerResponse.textContent = "Correct!";
+       // answerResponse.style.color = "green";
+       // answerResponse.style.fontSize = "400%";
+        // decrease time
         timeRemaining = timeRemaining - 5
         timerEl.textContent = timeRemaining
-
-        // If user has run out of time ends quiz
         if(timeRemaining <= 0){
             endQuiz();
         }
@@ -139,11 +131,15 @@ function selectAnswer(v) {
     }
 }
 
-function clearPreviousAnswerResult(){
-    answerResponse.textContent = "";
-}
+  
   
   
   
 
 
+// flash right/wrong feedback
+   // answerResponse.setAttribute("class", "answer-response");
+//setTimeout(function() {
+  //feedbackEl.setAttribute("class", "answer-response hide");
+//}, 1000);
+            

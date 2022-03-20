@@ -43,8 +43,6 @@ body{
     margin-top: 20px;
     padding-top: 10px;
     color: gray;
-    height: 75px;
-    
     border-top: 2px solid rgb(201, 193, 193);
 }
 
@@ -114,6 +112,10 @@ p {
     grid-template-columns: repeat(2, auto);
     gap: 15px;
     margin: 20px 0;
+}
+
+#end-screen {
+    margin: 100px 0;
 }
 
 .btn {
