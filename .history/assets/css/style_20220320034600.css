@@ -11,8 +11,8 @@
 }
 
 header {
-    
-    font-size: 40px;
+    font-style: italic;
+    font-size: 35px;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -49,25 +49,18 @@ body{
     top: 10px;
     right: 10px;
     color: red;
-    font-size: 25px;
 }
 
     a {
-        color:  #70707a;
+        color: white;
         text-decoration: none;
         transition: color 0.1s;
       }
       
       a:hover {
-        color: whitesmoke;}
+        color: #70707a;}
 
-p {
-    color:black;
-    font-size: 25px;
-    font-weight: normal;
-    
-}
-        
+
  .container {
     width: 800px;
     max-width: 70%;

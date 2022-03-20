@@ -9,7 +9,7 @@ var shuffledQuestions, currentQuestionIndex, currentScore
 var timer
 var timeRemaining = 90
 var initialsInputFieldEl =  document.getElementById('initials-input-field')
-var answerResponse = document.getElementById('answer-response')
+
 startButton.addEventListener('click', startQuiz)
 submitButton.addEventListener('click', submitScore)
 // function that starts the Quiz
@@ -65,8 +65,9 @@ function showQuestion(question) {
 
 function endQuiz() {
     submitButton.classList.remove('hide')
-    // startButton.innerText = 'Restart'
-    //startButton.classList.remove('hide')
+    startButton.innerText = 'Restart'
+    startButton.innerText.remove(questionContainerElement)
+    startButton.classList.remove('hide')
     questionContainerElement.classList.add('hide')
     endScreen.classList.remove('hide')
     clearInterval(timer)
@@ -89,9 +90,6 @@ function submitScore() {
     window.localStorage.setItem("highScores", JSON.stringify(highScores));
     
     submitButton.classList.add('hide')
-
-     // redirect to next page
-     window.location.href = "score.html";
 }
 // this function is used to reset each question
 function resetState() {

@@ -11,8 +11,8 @@
 }
 
 header {
-    
-    font-size: 40px;
+    font-style: bold;
+    font-size: 35px;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -63,8 +63,8 @@ body{
 
 p {
     color:black;
-    font-size: 25px;
-    font-weight: normal;
+    font-size: 22px;
+    font-weight: bold;
     
 }
         

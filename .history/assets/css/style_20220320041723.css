@@ -18,6 +18,8 @@ header {
     position: relative;
     align-items:center;
     padding: 20px 0 20px 0;
+    margin: 100px auto 0 auto;
+  max-width: 600px;
 }
 
 

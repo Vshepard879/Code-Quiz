@@ -9,7 +9,7 @@ var shuffledQuestions, currentQuestionIndex, currentScore
 var timer
 var timeRemaining = 90
 var initialsInputFieldEl =  document.getElementById('initials-input-field')
-var answerResponse = document.getElementById('answer-response')
+
 startButton.addEventListener('click', startQuiz)
 submitButton.addEventListener('click', submitScore)
 // function that starts the Quiz

@@ -108,7 +108,13 @@ function selectAnswer(v) {
 
     if (correct) {
         console.log("correct!")
+        answerResponse.textContent = "Correct!";
+        answerResponse.style.color = "green";
+        answerResponse.style.fontSize = "400%";
     } else {
+        answerResponse.textContent = "Correct!";
+        answerResponse.style.color = "green";
+        answerResponse.style.fontSize = "400%";
         // decrease time
         timeRemaining = timeRemaining - 5
         timerEl.textContent = timeRemaining
@@ -125,5 +131,8 @@ function selectAnswer(v) {
     }
 }
 
+  
+  
+  
+  
 
-            

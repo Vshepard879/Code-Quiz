@@ -5,23 +5,15 @@
 }
 
 :root {
-    --hue-neutral: 200;
+    --hue-neutral: 70;
     
     
 }
 
 header {
-    
-    font-size: 40px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    align-items:center;
-    padding: 20px 0 20px 0;
+    font-style: italic;
+    font-size: 35px;
 }
-
-
-
 body{
     --hue: var(--hue-neutral);
     padding: 0;
@@ -32,7 +24,7 @@ body{
     height: 100vh;
     justify-content:center;
     align-items:center;
-    background-color:hsl(var(--hue), 100%, 20%);
+    background-color:hsl(var(--hue), 100%, 35%);
 }
 
 .hide {
@@ -47,27 +39,18 @@ body{
   .timer {
     position: absolute;
     top: 10px;
-    right: 10px;
-    color: red;
-    font-size: 25px;
-}
+    right: 10px;}
 
     a {
-        color:  #70707a;
+        color: black;
         text-decoration: none;
         transition: color 0.1s;
       }
       
       a:hover {
-        color: whitesmoke;}
+        color: #70707a;}
 
-p {
-    color:black;
-    font-size: 25px;
-    font-weight: normal;
-    
-}
-        
+
  .container {
     width: 800px;
     max-width: 70%;
@@ -89,9 +72,28 @@ p {
     position: absolute;
     top: 10px;
     left: 10px;
-    color:aliceblue;
   }
   
+  .feedback {
+    font-style: italic;
+    font-size: 120%;
+    margin-top: 20px;
+    padding-top: 10px;
+    color: gray;
+    border-top: 2px solid rgb(201, 193, 193);
+  }
+  
+  .timer {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.1s;
+  }
 .btn-grid {
     display: grid;
     grid-template-columns: repeat(2, auto);
@@ -102,8 +104,8 @@ p {
 
 .btn {
     --hue: var(--hue-neutral);
-    border: 2px solid hsl(var(--hue),100%, 30%);
-    background-color: hsl(var(--hue), 100%, 40%);
+    border: 1px solid hsl(var(--hue),100%, 40%);
+    background-color: hsl(var(--hue), 100%, 50%);
     border-radius: 8px;
     padding: 5px 10px;
     color: black;
@@ -114,6 +116,13 @@ p {
     border-color: black;
 }
 
+.btn.correct {
+    --hue: var(--hue-correct)
+}
+
+.btn.wrong {
+    --hue: var(--hue-wrong)
+}
 
 .start-btn {
     font-size: 1.5rem;
